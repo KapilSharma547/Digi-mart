@@ -1,6 +1,11 @@
 const express = require("express");
 const dbConnect = require("./config/dbConnect");
 const dotenv = require("dotenv").config();
+const cors = require("cors");
+// Route Imports
+const authRoute = require("./routes/authRoute");
+const productRouter = require("./routes/productRoute");
+
 // app
 const app = express();
 
@@ -9,11 +14,8 @@ dbConnect();
 
 // middleware
 app.use(express.json());
+app.use(cors());
 
-
-// Route Imports
-const authRoute = require("./routes/authRoute");
-const productRouter = require("./routes/productRoute");
 // Route
 app.use("/api/user", authRoute);
 app.use("/api/product", productRouter);

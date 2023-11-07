@@ -5,7 +5,6 @@ const {
 } = require("../controller/userController");
 
 // Router Object
-
 const router = express.Router();
 
 // register user

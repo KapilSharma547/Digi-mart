@@ -5,7 +5,8 @@ const { authMiddleware, isAdmin } = require("../middlewares/authMiddleware");
 // router export
 const router = express.Router();
 
-isAdmin
-router.post("/create", authMiddleware,isAdmin, createProduct);
+router.post("/", authMiddleware, isAdmin, (req, res) => {
+  res.send("OK");
+});
 
 module.exports = router;
