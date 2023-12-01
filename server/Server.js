@@ -14,7 +14,7 @@ dbConnect();
 
 
 const corsOptions = {
-    origin: "https://digi-mart-client-application.onrender.com/" // frontend URI (ReactJS)
+    origin: "https://digi-mart-client-application.onrender.com" // frontend URI (ReactJS)
 }
 
 // middleware
