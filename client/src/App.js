@@ -7,7 +7,7 @@ function App() {
   useEffect(() => {
     fetch("https://digi-backend.onrender.com")
       .then((res) => res.json())
-      .then((data) => setMessage(data.message));
+      .then((data) => setMessage(data));
   }, []);
 
   console.log("==>message", message);
