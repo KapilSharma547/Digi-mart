@@ -12,9 +12,14 @@ const app = express();
 // connect Db
 dbConnect();
 
+
+const corsOptions = {
+    origin: "https://digi-mart-client-application.onrender.com/" // frontend URI (ReactJS)
+}
+
 // middleware
 app.use(express.json());
-app.use(cors());
+app.use(cors(corsOptions));
 
 // Route
 app.use("/", (req, res) => {
