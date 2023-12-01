@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 function App() {
   const [message, setMessage] = useState("");
 
+  
   // Fetching message from backend on mount
   useEffect(() => {
     fetch("https://digi-backend.onrender.com")
