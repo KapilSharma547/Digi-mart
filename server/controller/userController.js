@@ -99,4 +99,15 @@ const loginUserController = asyncHandler(async (req, res) => {
   }
 });
 
-module.exports = { createUser, loginUserController };
+// Admin-login
+
+const loginAdminController = async (req, res) => {
+  try {
+    const { email, password } = req.body;
+    console.log("email, password :>> ", email, password);
+  } catch (error) {
+    console.log("error :>> ", error);
+  }
+};
+
+module.exports = { createUser, loginUserController, loginAdminController };

@@ -15,6 +15,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/login" element={<Login />} />
+        <Route path="/forgot-password" element={<h1>Forgot</h1>} />
       </Routes>
     </Router>
   );
