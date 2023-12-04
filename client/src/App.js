@@ -1,21 +1,22 @@
 import { useEffect, useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Login from "./pages/Login.js";
 
 function App() {
   const [message, setMessage] = useState("");
 
-  
   // Fetching message from backend on mount
-  useEffect(() => {
-    fetch("https://digi-backend.onrender.com")
-      .then((res) => res.json())
-      .then((data) => setMessage(data));
-  }, []);
-
-  console.log("==>message", message);
+  // useEffect(() => {
+  //   fetch(`${process.env.REACT_APP_URL}`)
+  //     .then((res) => res.json())
+  //     .then((data) => setMessage(data));
+  // }, []);
   return (
-    <div className="App">
-      <h1>{message}</h1>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+      </Routes>
+    </Router>
   );
 }
 
